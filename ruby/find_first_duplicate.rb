@@ -1,5 +1,13 @@
+require 'pry'
+
 def find_first_duplicate(arr)
-  # type your code in here
+  list = []
+
+  arr.each do |e|
+    return e if list.include?(e)
+    list.push(e)
+  end
+  -1
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -15,4 +23,13 @@ if __FILE__ == $PROGRAM_NAME
 end
 
 # Please add your pseudocode to this file
+
+# create an empty array called list
+# cycle through each element of the arr that was passed in 
+# for each element:
+  # if the element already exists in the list, return element
+  # else, add element to list
+
+
+
 # And a written explanation of your solution
